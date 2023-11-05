@@ -1,0 +1,29 @@
+/* Nav.css */
+a.active {
+  color: white !important;
+background-color: #65CDC0 !important;
+  text-decoration: underline;
+   font-weight: 700;
+ 
+}
+
+/* Change the link color to red when hovering */
+a:hover {
+  color: #65CDC0 !important;
+  background-color: white;
+   font-weight: 700;
+}
+
+/* Change the link color to blue when hovering and active */
+a.active:hover {
+  color: blue !important;
+  background-color: #65CDC0 !important;
+}
+
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}

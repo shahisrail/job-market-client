@@ -1,0 +1,4 @@
+.slide-up {
+  transform: translateY(0);
+  transition: transform 0.5s ease;
+}
