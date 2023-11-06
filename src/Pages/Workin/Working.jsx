@@ -29,7 +29,7 @@ const Working = () => {
             </p>
           </div>
         </div>
-        <div className="bg-[#FFFFFF]  rounded-lg">
+        <div className="bg-opacity-50 bg-blur-md bg-[#FFFFFF] rounded-lg">
           <div className="flex justify-between p-5">
             <div className="flex justify-center items-center">
               <h2 className="flex justify-center items-center text-6xl text-[#BC84CA] font-bold">
@@ -51,6 +51,7 @@ const Working = () => {
             </p>
           </div>
         </div>
+
         <div className="bg-[#FFFFFF] rounded-lg ">
           <div className="flex justify-between p-5">
             <div className="flex justify-center items-center">

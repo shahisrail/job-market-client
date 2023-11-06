@@ -100,11 +100,13 @@ const Nav = () => {
           </ul>
         </div>
         <div>
-          <img
-            className="w-[200px] h-[50px] "
-            src="https://i.ibb.co/LnyF4B3/Untitled-design-1.png"
-            alt=""
-          />
+          <Link to='/'>
+            <img
+              className="w-[200px] h-[50px] "
+              src="https://i.ibb.co/LnyF4B3/Untitled-design-1.png"
+              alt=""
+            />
+          </Link>
         </div>
         <a className="normal-case lg:text-xl">job market</a>
         <div></div>

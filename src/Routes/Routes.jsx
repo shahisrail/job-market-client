@@ -7,6 +7,7 @@ import Regestratoin from "../Pages/Regestratoin/Regestratoin";
 import PrivateRoute from "./PrivateRoute";
 import Mypost from "../Pages/Mypost/Mypost";
 import Jobdetails from "../Pages/JobDetails/Jobdetails";
+import Updated from "../Pages/Update/Updated";
 
 const router = createBrowserRouter([
   {
@@ -36,12 +37,28 @@ const router = createBrowserRouter([
       },
       {
         path: "/mypost",
-        element: <Mypost></Mypost>,
-        loader: () => fetch("http://localhost:5000/cart"),
+        element: (
+          <PrivateRoute>
+            {" "}
+            <Mypost></Mypost>,
+          </PrivateRoute>
+        ),
+        
       },
       {
         path: "/jobdetails/:id",
-        element: <Jobdetails></Jobdetails>,
+        element: (
+          <PrivateRoute>
+            <Jobdetails></Jobdetails>,
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/cart/${params.id}`),
+      },
+
+      {
+        path: "/update/:id",
+        element: <Updated></Updated>,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/cart/${params.id}`),
       },

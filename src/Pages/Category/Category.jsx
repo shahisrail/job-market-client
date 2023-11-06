@@ -9,7 +9,7 @@ const Category = () => {
   const data = useLoaderData(); 
   console.log(data);
    
-  const filter = data?.filter((p) => p.Category.includes("web"));
+  const filter =  data?.filter((p) => p.Category.includes("web"));
   const filter1 = data?.filter((p) => p.Category.includes("digital"));
   const filter2 = data?.filter((p) => p.Category.includes("graphics"));
   console.log(filter);
