@@ -6,13 +6,17 @@ import Login from "../Pages/Login/Login";
 import Regestratoin from "../Pages/Regestratoin/Regestratoin";
 import PrivateRoute from "./PrivateRoute";
 import Mypost from "../Pages/Mypost/Mypost";
+import Mybids from "../Pages/Mybids/Mybids";
+import BidRequest from "../Pages/BidRequest/Request";
 import Jobdetails from "../Pages/JobDetails/Jobdetails";
 import Updated from "../Pages/Update/Updated";
+import Error from "../Pages/ErrorPages/Error";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement:<Error></Error>,
     children: [
       {
         path: "/",
@@ -39,11 +43,9 @@ const router = createBrowserRouter([
         path: "/mypost",
         element: (
           <PrivateRoute>
-            {" "}
             <Mypost></Mypost>,
           </PrivateRoute>
         ),
-        
       },
       {
         path: "/jobdetails/:id",
@@ -61,6 +63,22 @@ const router = createBrowserRouter([
         element: <Updated></Updated>,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/cart/${params.id}`),
+      },
+      {
+        path: "/mybids",
+        element: (
+          <PrivateRoute>
+            <Mybids></Mybids>,
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/BidRequest",
+        element: (
+          <PrivateRoute>
+            <BidRequest></BidRequest>,
+          </PrivateRoute>
+        ),
       },
     ],
   },

@@ -44,7 +44,7 @@ const MyPostCard = ({ cart, setData, cartdata,  }) => {
     });
   };
   return (
-    <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div className=" p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       <a>
         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
           JobTitale: {Jobtitle}
@@ -60,14 +60,14 @@ const MyPostCard = ({ cart, setData, cartdata,  }) => {
         </p>
       </a>
 
-      <div className="flex justify-between">
-        <button onClick={() => hnadelDelete(_id)} className="btn-grad">
+      <div className=" lg:flex justify-between">
+        <button onClick={() => hnadelDelete(_id)} className="btn-grad w-full">
           Delete
         </button>
-
         <Link to={`/update/${_id}`}>
-          <button className="btn btn-primary btn-grad">Update </button>
+          <button className="btn-grad w-full">Update</button>
         </Link>
+        
       </div>
     </div>
   );

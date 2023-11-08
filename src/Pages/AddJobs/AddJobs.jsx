@@ -1,58 +1,56 @@
 /* eslint-disable no-unused-vars */
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
-import Swal from 'sweetalert2';
-import { AuthContext } from '../../AuthProvider/provider';
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
+import { AuthContext } from "../../AuthProvider/provider";
 
 const AddJobs = () => {
-  const { user } = useContext(AuthContext); 
+  const { user } = useContext(AuthContext);
   console.log(user);
-   const handelSubmit = (e) => {
-     e.preventDefault();
-     const form = e.target;
-     const Email = form.Email.value;
-     const Jobtitle = form.Jobtitle.value;
-     const Deadline = form.Deadline.value;
-     const Description = form.Description.value;
-     const Category = form.Category.value;
-     const Minimumprice = form.Minimumprice.value;
-     const Maximumprice = form.Maximumprice.value;
-     
-     const cart = {
-       Email,
-       Jobtitle,
-       Deadline,
-       Description,
-       Category,
-       Minimumprice,
-       Maximumprice,
-       applyed: false,
-       availavelvid: true,
-       
-      
-     };
-     console.log(cart);
-     fetch(`http://localhost:5000/cart`, {
-       method: "POST",
-       headers: {
-         "Content-Type": "application/json",
-       },
-       body: JSON.stringify(cart),
-     })
-       .then((res) => res.json())
-       .then((data) => {
-         console.log(data);
-         form.reset();
-         if (data.insertedId) {
-           Swal.fire({
-             title: "Success!",
-             text: "product Added Successfully",
-             icon: "success",
-             confirmButtonText: "Cool",
-           });
-         }
-       });
-   };
+  const handelSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const Email = form.Email.value;
+    const Jobtitle = form.Jobtitle.value;
+    const Deadline = form.Deadline.value;
+    const Description = form.Description.value;
+    const Category = form.Category.value;
+    const Minimumprice = form.Minimumprice.value;
+    const Maximumprice = form.Maximumprice.value;
+
+    const cart = {
+      Email,
+      Jobtitle,
+      Deadline,
+      Description,
+      Category,
+      Minimumprice,
+      Maximumprice,
+      applyed: false,
+      availavelvid: true,
+    };
+    console.log(cart);
+    fetch(`http://localhost:5000/cart`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(cart),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        form.reset();
+        if (data.insertedId) {
+          Swal.fire({
+            title: "Success!",
+            text: "product Added Successfully",
+            icon: "success",
+            confirmButtonText: "Cool",
+          });
+        }
+      });
+  };
   return (
     <div className="container mx-auto mt-5 ">
       <div className="bg-[#194656] p-4 md:p-24 ">

@@ -39,11 +39,11 @@ const Nav = () => {
       <li className="bg-white">
         <NavLink to="/">Home</NavLink>
       </li>
-      { (
+      {
         <li>
           <NavLink to="/Addjob">Add job</NavLink>
         </li>
-      )}
+      }
       {user && (
         <li>
           <NavLink to="/mypost">My posted</NavLink>
@@ -56,15 +56,12 @@ const Nav = () => {
       )}
       {user && (
         <li>
-          <NavLink to="/MyBids">My Bids</NavLink>
+          <NavLink to="/mybids">My Bids</NavLink>
         </li>
       )}
       {user && (
         <li>
-          <NavLink
-            to="/BidRequests" >
-            Bid Requests
-          </NavLink>
+          <NavLink to="/BidRequest">Bid Requests</NavLink>
         </li>
       )}
       <li>
