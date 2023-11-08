@@ -46,9 +46,9 @@ const AddJobs = () => {
         if (data.insertedId) {
           Swal.fire({
             title: "Success!",
-            text: "product Added Successfully",
+            text: "job Added Successfully",
             icon: "success",
-            confirmButtonText: "Cool",
+            confirmButtonText:"Cool",
           });
           navigate("/mypost");
         }
