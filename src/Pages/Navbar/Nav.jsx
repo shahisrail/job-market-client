@@ -100,7 +100,7 @@ const Nav = () => {
             />
           </Link>
         </div>
-        <a className="normal-case lg:text-xl">job market</a>
+        <a className="normal-case lg:text-xl">Job market</a>
         <div></div>
       </div>
       <div className="navbar-center hidden lg:flex">
