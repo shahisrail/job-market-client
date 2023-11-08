@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import Swal from "sweetalert2";
 import { AuthContext } from "../../AuthProvider/provider";
+import { Helmet } from "react-helmet";
 
 const Login = () => {
   const { signIn, signinWithGoogle } = useContext(AuthContext);
@@ -58,6 +59,9 @@ const Login = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Job market | Login</title>
+      </Helmet>
       <section className="py-26 bg-white">
         <div className="container px-4 mx-auto">
           <div className="max-w-lg mx-auto">

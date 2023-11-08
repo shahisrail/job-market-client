@@ -4,6 +4,7 @@ import { useLoaderData } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import JobCar from "../JobCard/JobCar";
+import { Helmet } from "react-helmet";
 
 const Category = () => {
   const data = useLoaderData(); 
@@ -16,6 +17,7 @@ const Category = () => {
    
   return (
     <div className="mt-5">
+   
       <h2 className="text-center text-3xl font-semibold mt-5">
         Browse By Category
       </h2>
@@ -27,21 +29,21 @@ const Category = () => {
         </TabList>
 
         <TabPanel>
-          <div className="grid grid-cols-2 gap-5 mx-auto p-5">
+          <div className="grid  grid-cols-1 lg:grid-cols-2 gap-5 mx-auto p-5">
             {filter.map((cart) => (
               <JobCar cart={cart} key={cart.id} />
             ))}
           </div>
         </TabPanel>
         <TabPanel>
-          <div className="grid grid-cols-2 gap-5 mx-auto p-5">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mx-auto p-5">
             {filter1.map((cart) => (
               <JobCar cart={cart} key={cart.id} />
             ))}
           </div>
         </TabPanel>
         <TabPanel>
-          <div className="grid grid-cols-2 gap-5 mx-auto p-5">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mx-auto p-5">
             {filter2.map((cart) => (
               <JobCar cart={cart} key={cart.id} />
             ))}

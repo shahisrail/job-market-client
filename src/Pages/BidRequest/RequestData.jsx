@@ -8,10 +8,10 @@ const RequestData = ({ data }) => {
 
   const handelAkcept = (id) => {
     const status = { status:"progress" };
-    axios
-      .patch(`http://localhost:5000/BidRequest/${id}`, status)
-      .then((response) => console.log(response))
-      .catch((error) => console.log(error));
+      axios
+        .patch(`http://localhost:5000/BidRequest/${id}`, status)
+        .then((response) => console.log(response))
+        .catch((error) => console.log(error));
   };
   const handelReject = (id) => {
     const status = { status: "rejected" };

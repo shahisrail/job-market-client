@@ -1,11 +1,12 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../AuthProvider/provider";
 
 const AddJobs = () => {
   const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
   console.log(user);
   const handelSubmit = (e) => {
     e.preventDefault();
@@ -17,7 +18,7 @@ const AddJobs = () => {
     const Category = form.Category.value;
     const Minimumprice = form.Minimumprice.value;
     const Maximumprice = form.Maximumprice.value;
-
+    
     const cart = {
       Email,
       Jobtitle,
@@ -42,13 +43,16 @@ const AddJobs = () => {
         console.log(data);
         form.reset();
         if (data.insertedId) {
+         
           Swal.fire({
             title: "Success!",
             text: "product Added Successfully",
             icon: "success",
             confirmButtonText: "Cool",
           });
+        navigate("/mypost");
         }
+
       });
   };
   return (

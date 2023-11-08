@@ -2,11 +2,12 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext } from "react";
 import Swal from "sweetalert2";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/provider";
 
 const Jobdetails = () => {
   const { user } = useContext(AuthContext);
+  const navigate = useNavigate()
   const load = useLoaderData();
   console.log(load);
   const {
@@ -60,6 +61,7 @@ const Jobdetails = () => {
             confirmButtonText: "Cool",
           });
         }
+        navigate('/mybids')
       });
   };
 

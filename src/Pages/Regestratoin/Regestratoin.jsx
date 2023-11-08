@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom"
 import Swal from "sweetalert2";
 import { updateProfile } from "firebase/auth";
 import { AuthContext } from "../../AuthProvider/provider";
+import { Helmet } from "react-helmet";
 
 const Regestratoin = () => {
   const { user, setUser, createuser, signinWithGoogle } =
@@ -79,6 +80,9 @@ const Regestratoin = () => {
   };
   return (
     <div>
+      <Helmet>
+        <title>Job market | Regestratoin</title>
+      </Helmet>
       <section className="py-26 bg-white">
         <div className="container px-4 mx-auto">
           <div className="max-w-lg mx-auto">

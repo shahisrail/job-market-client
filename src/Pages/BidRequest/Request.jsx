@@ -2,6 +2,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../AuthProvider/provider';
 import RequestData from './RequestData';
+import { Helmet } from 'react-helmet';
 
 const Request = () => {
    const [request, setRequest] = useState([]);
@@ -12,7 +13,7 @@ const Request = () => {
   console.log(request);
 
    useEffect(() => {
-     fetch(url)
+     fetch(url, { credentials: "include" })
        .then((res) => res.json())
        .then((data) => setRequest(data))
        .catch((error) => console.error("Error fetching data:", error));
@@ -23,6 +24,9 @@ const Request = () => {
    }
   return (
     <div className="overflow-x-auto">
+      <Helmet>
+        <title>Job market | Bid Request</title>
+      </Helmet>
       <table className="table">
         <thead>
           <tr>

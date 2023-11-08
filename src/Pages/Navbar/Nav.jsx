@@ -99,7 +99,7 @@ const Nav = () => {
         <div>
           <Link to='/'>
             <img
-              className="w-[200px] h-[50px] "
+              className="w-[200px] h-[50px] hidden md:block "
               src="https://i.ibb.co/LnyF4B3/Untitled-design-1.png"
               alt=""
             />

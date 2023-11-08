@@ -2,6 +2,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../AuthProvider/provider";
 import MybidsData from "./MybidsData";
+import { Helmet } from "react-helmet";
 
 const Mybids = () => {
   const [bids, setBids] = useState([]);
@@ -17,7 +18,7 @@ const Mybids = () => {
     const sortedUrl =
       status === "asc" ? `${apiUrl}&sortField=status&sortOrder=asc` : apiUrl;
 
-    fetch(sortedUrl)
+    fetch(sortedUrl, { credentials: "include" })
       .then((res) => res.json())
       .then((data) => setBids(data))
       .catch((error) => console.error("Error fetching data:", error));
@@ -29,11 +30,14 @@ const Mybids = () => {
 
   return (
     <div className="overflow-x-auto">
+      <Helmet>
+        <title>Job market | My Bids</title>
+      </Helmet>
       <table className="table">
         <thead>
           <tr>
             <th></th>
-            <th>Email</th>
+            <th></th>
             <th>Byer email</th>
             <th>Job title</th>
             <th>Deadline</th>
@@ -46,7 +50,6 @@ const Mybids = () => {
               >
                 <option value="">Choose one</option>
                 <option value="asc">From high to low</option>
-                <option value="desc">From low to high</option>
               </select>
             </th>
           </tr>

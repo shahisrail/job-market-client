@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React from "react";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -14,6 +15,7 @@ const JobCar = ({ cart }) => {
     Minimumprice,
     Maximumprice,
   } = cart;
+
 
   const deadlineDate = new Date(Deadline);
   const currentDate = new Date();
@@ -32,6 +34,7 @@ const JobCar = ({ cart }) => {
 
   return (
     <div className="relative flex flex-col mt-6 text-gray-700 bg-white shadow-md  rounded-xl bg-clip-border">
+      
       <div className="p-6">
         <h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
           Category: {Category}

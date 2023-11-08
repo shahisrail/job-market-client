@@ -11,20 +11,12 @@ const PrivateRoute = ({ children }) => {
   console.log(locatoin);
   if (loading) {
     return (
-      <h2 className="flex justify-center items-center min-h-[60vh]">
-        <ThreeCircles
-          height="100"
-          width="100"
-          color="#4fa94d"
-          wrapperStyle={{}}
-          wrapperClass=""
-          visible={true}
-          ariaLabel="three-circles-rotating"
-          outerCircleColor=""
-          innerCircleColor=""
-          middleCircleColor=""
+      <div className="mx-auto">
+        <img
+          src="https://i.ibb.co/qWRYqKH/tumblr-n71kcn1ch11ttqncoo1-500.webp"
+          alt=""
         />
-      </h2>
+      </div>
     );
   }
   if (user) {
