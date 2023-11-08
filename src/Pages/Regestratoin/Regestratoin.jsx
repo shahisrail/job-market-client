@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom"
 import Swal from "sweetalert2";

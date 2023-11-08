@@ -51,11 +51,6 @@ const Nav = () => {
       )}
       {user && (
         <li>
-          <NavLink to="/jobs">jobs</NavLink>
-        </li>
-      )}
-      {user && (
-        <li>
           <NavLink to="/mybids">My Bids</NavLink>
         </li>
       )}
@@ -99,7 +94,7 @@ const Nav = () => {
         <div>
           <Link to='/'>
             <img
-              className="w-[200px] h-[50px] hidden md:block "
+              className="w-[200px] h-[50px] hidden md:block  "
               src="https://i.ibb.co/LnyF4B3/Untitled-design-1.png"
               alt=""
             />

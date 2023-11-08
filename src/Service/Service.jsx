@@ -19,7 +19,7 @@ const Service = () => {
             </h5>
             <p className="block font-sans text-base antialiased font-light leading-relaxed text-inherit">
               The place is close to Barceloneta Beach and bus stop just 2 min by
-              walk and near to "Naviglio" where you can enjoy the main night
+              walk and near to Naviglio where you can enjoy the main night
               life in Barcelona.
             </p>
           </div>
