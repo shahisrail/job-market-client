@@ -34,7 +34,6 @@ const JobCar = ({ cart }) => {
 
   return (
     <div className="relative flex flex-col mt-6 text-gray-700 bg-white shadow-md  rounded-xl bg-clip-border">
-      
       <div className="p-6">
         <h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
           Category: {Category}
@@ -46,10 +45,10 @@ const JobCar = ({ cart }) => {
           Deadline: {Deadline}
         </h5>
         <p className="block font-sans text-base antialiased font-light leading-relaxed text-inherit">
-          Short description: {Description}
+          Price range: {Minimumprice}$ - {Maximumprice}$
         </p>
         <p className="block font-sans text-base antialiased font-light leading-relaxed text-inherit">
-          Price range: {Minimumprice}$ - {Maximumprice}$
+          Short description: {Description}
         </p>
       </div>
       <div className="p-6 pt-0">
