@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../AuthProvider/provider";
+import { Helmet } from "react-helmet";
 
 const AddJobs = () => {
   const { user } = useContext(AuthContext);
@@ -57,6 +58,9 @@ const AddJobs = () => {
   };
   return (
     <div className="container mx-auto mt-5 ">
+      <Helmet>
+        <title>Job market | Add Job</title>
+      </Helmet>
       <div className="bg-[#194656] p-4 md:p-24 ">
         <h2 className="text-3xl text-yellow-300 mt-[-50px] font-extrabold">
           Add a jobs
