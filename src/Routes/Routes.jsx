@@ -16,12 +16,12 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
-    errorElement:<Error></Error>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("http://localhost:5000/cart"),
+        loader: () => fetch("https://assaignment-11-server-nu.vercel.app/cart"),
       },
       {
         path: "/Addjob",
@@ -55,14 +55,18 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/cart/${params.id}`),
+          fetch(
+            `https://assaignment-11-server-nu.vercel.app/cart/${params.id}`
+          ),
       },
 
       {
         path: "/update/:id",
         element: <Updated></Updated>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/cart/${params.id}`),
+          fetch(
+            `https://assaignment-11-server-nu.vercel.app/cart/${params.id}`
+          ),
       },
       {
         path: "/mybids",

@@ -7,16 +7,22 @@ const RequestData = ({ data }) => {
   const { Deadline, Email, Price, Jobtitle, _id, status } = data;
 
   const handelAkcept = (id) => {
-    const status = { status:"progress" };
-      axios
-        .patch(`http://localhost:5000/BidRequest/${id}`, status)
-        .then((response) => console.log(response))
-        .catch((error) => console.log(error));
+    const status = { status: "progress" };
+    axios
+      .patch(
+        `https://assaignment-11-server-nu.vercel.app/BidRequest/${id}`,
+        status
+      )
+      .then((response) => console.log(response))
+      .catch((error) => console.log(error));
   };
   const handelReject = (id) => {
     const status = { status: "rejected" };
     axios
-      .patch(`http://localhost:5000/BidRequest/${id}`, status)
+      .patch(
+        `https://assaignment-11-server-nu.vercel.app/BidRequest/${id}`,
+        status
+      )
       .then((response) => console.log(response))
       .catch((error) => console.log(error));
   };
@@ -42,8 +48,9 @@ const RequestData = ({ data }) => {
         </button>
       </td>
       <td>
-       
-        <button onClick={ ()=> handelReject(_id)} className="btn">Reject</button>
+        <button onClick={() => handelReject(_id)} className="btn">
+          Reject
+        </button>
       </td>
     </tr>
   );

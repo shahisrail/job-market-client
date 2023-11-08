@@ -12,7 +12,7 @@ const Mybids = () => {
   console.log(status);
 
   useEffect(() => {
-    const apiUrl = `http://localhost:5000/mybids?Email=${user?.email}`;
+    const apiUrl = `https://assaignment-11-server-nu.vercel.app/mybids?Email=${user?.email}`;
 
     // Add sorting parameters based on the selected "status" value
     const sortedUrl =

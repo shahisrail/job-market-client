@@ -1,4 +1,3 @@
-
 /* eslint-disable no-unused-vars */
 import React, { useContext } from "react";
 import Swal from "sweetalert2";
@@ -7,7 +6,7 @@ import { AuthContext } from "../../AuthProvider/provider";
 
 const Jobdetails = () => {
   const { user } = useContext(AuthContext);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const load = useLoaderData();
   console.log(load);
   const {
@@ -37,12 +36,12 @@ const Jobdetails = () => {
       Description,
       Price,
       Jobtitle,
-      status:"panding",
+      status: "panding",
       applyed: false,
       availavelvid: true,
     };
     console.log(cart);
-    fetch("http://localhost:5000/mybids", {
+    fetch("https://assaignment-11-server-nu.vercel.app/mybids", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -61,7 +60,7 @@ const Jobdetails = () => {
             confirmButtonText: "Cool",
           });
         }
-        navigate('/mybids')
+        navigate("/mybids");
       });
   };
 
@@ -72,7 +71,7 @@ const Jobdetails = () => {
           Category: {Category}
         </h5>
         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            Job-Titale: {Jobtitle}
+          Job-Titale: {Jobtitle}
         </h5>
         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
           Deadline: {Deadline}

@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet";
 const Mypost = () => {
   const { user } = useContext(AuthContext);
   const [cartdata, setData] = useState([]);
-  const url = `http://localhost:5000/cart?Email=${user?.email}`;
+  const url = `https://assaignment-11-server-nu.vercel.app/cart?Email=${user?.email}`;
   console.log(cartdata);
   useEffect(() => {
     fetch(url, { credentials: "include" })

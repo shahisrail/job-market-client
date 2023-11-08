@@ -41,7 +41,7 @@ const Updated = () => {
       availavelvid: true,
     };
     console.log(updatejob);
-    fetch(`http://localhost:5000/cart/${_id}`, {
+    fetch(`https://assaignment-11-server-nu.vercel.app/cart/${_id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -51,8 +51,8 @@ const Updated = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-       
-        if (data.modifiedCount>0) {
+
+        if (data.modifiedCount > 0) {
           Swal.fire({
             title: "Success!",
             text: "job update Successfully",

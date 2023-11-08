@@ -1,27 +1,27 @@
 /* eslint-disable no-unused-vars */
-import React, { useContext, useEffect, useState } from 'react';
-import { AuthContext } from '../../AuthProvider/provider';
-import RequestData from './RequestData';
-import { Helmet } from 'react-helmet';
+import React, { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../AuthProvider/provider";
+import RequestData from "./RequestData";
+import { Helmet } from "react-helmet";
 
 const Request = () => {
-   const [request, setRequest] = useState([]);
-   const { user } = useContext(AuthContext);
-  const url = `http://localhost:5000/BidRequest?Byeremail=${user?.email}`;
+  const [request, setRequest] = useState([]);
+  const { user } = useContext(AuthContext);
+  const url = `https://assaignment-11-server-nu.vercel.app/BidRequest?Byeremail=${user?.email}`;
 
   console.log(url);
   console.log(request);
 
-   useEffect(() => {
-     fetch(url, { credentials: "include" })
-       .then((res) => res.json())
-       .then((data) => setRequest(data))
-       .catch((error) => console.error("Error fetching data:", error));
-   }, []);
+  useEffect(() => {
+    fetch(url, { credentials: "include" })
+      .then((res) => res.json())
+      .then((data) => setRequest(data))
+      .catch((error) => console.error("Error fetching data:", error));
+  }, []);
 
-   if (request.length === 0) {
-     return <div>Loading...</div>;
-   }
+  if (request.length === 0) {
+    return <div>Loading...</div>;
+  }
   return (
     <div className="overflow-x-auto">
       <Helmet>

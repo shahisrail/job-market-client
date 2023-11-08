@@ -4,7 +4,7 @@ import React from "react";
 import "./btn.css";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
-const MyPostCard = ({ cart, setData, cartdata,  }) => {
+const MyPostCard = ({ cart, setData, cartdata }) => {
   const {
     _id,
     Email,
@@ -28,7 +28,7 @@ const MyPostCard = ({ cart, setData, cartdata,  }) => {
     }).then((result) => {
       if (result.isConfirmed) {
         // Swal.fire("Deleted!", "Your file has been deleted.", "success");
-        fetch(`http://localhost:5000/cart/${_id}`, {
+        fetch(`https://assaignment-11-server-nu.vercel.app/cart/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -67,7 +67,6 @@ const MyPostCard = ({ cart, setData, cartdata,  }) => {
         <Link to={`/update/${_id}`}>
           <button className="btn-grad w-full">Update</button>
         </Link>
-        
       </div>
     </div>
   );

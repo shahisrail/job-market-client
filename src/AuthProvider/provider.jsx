@@ -47,23 +47,27 @@ const AuthProvider = ({ children }) => {
       setUser(currentUser);
       setLoading(false);
       // // if user exist then issue a token
-       if (currentUser) {
-         axios
-           .post("http://localhost:5000/jwt", loggedUSer, {
-             withCredentials: true,
-           })
-           .then((res) => {
-             console.log("token response ", res.data);
-           });
-       } else {
-         axios
-           .post("http://localhost:5000/logout", loggedUSer, {
-             withCredentials: true,
-           })
-           .then((res) => {
-             console.log(res.data);
-           });
-       }
+      if (currentUser) {
+        axios
+          .post("https://assaignment-11-server-nu.vercel.app/jwt", loggedUSer, {
+            withCredentials: true,
+          })
+          .then((res) => {
+            console.log("token response ", res.data);
+          });
+      } else {
+        axios
+          .post(
+            "https://assaignment-11-server-nu.vercel.app/logout",
+            loggedUSer,
+            {
+              withCredentials: true,
+            }
+          )
+          .then((res) => {
+            console.log(res.data);
+          });
+      }
     });
     return () => {
       unSubscribe;

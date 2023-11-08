@@ -19,7 +19,7 @@ const AddJobs = () => {
     const Category = form.Category.value;
     const Minimumprice = form.Minimumprice.value;
     const Maximumprice = form.Maximumprice.value;
-    
+
     const cart = {
       Email,
       Jobtitle,
@@ -32,7 +32,7 @@ const AddJobs = () => {
       availavelvid: true,
     };
     console.log(cart);
-    fetch(`http://localhost:5000/cart`, {
+    fetch(`https://assaignment-11-server-nu.vercel.app/cart`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -44,16 +44,14 @@ const AddJobs = () => {
         console.log(data);
         form.reset();
         if (data.insertedId) {
-         
           Swal.fire({
             title: "Success!",
             text: "product Added Successfully",
             icon: "success",
             confirmButtonText: "Cool",
           });
-        navigate("/mypost");
+          navigate("/mypost");
         }
-
       });
   };
   return (
