@@ -28,7 +28,7 @@ const RequestData = ({ data }) => {
   };
 
   return (
-    <tr>
+    <tr data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
       <th></th>
       <td>
         <div className="flex items-center space-x-3">

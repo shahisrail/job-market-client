@@ -48,7 +48,7 @@ const AddJobs = () => {
             title: "Success!",
             text: "job Added Successfully",
             icon: "success",
-            confirmButtonText:"Cool",
+            confirmButtonText: "Cool",
           });
           navigate("/mypost");
         }

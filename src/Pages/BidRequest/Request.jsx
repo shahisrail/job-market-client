@@ -38,6 +38,7 @@ const Request = () => {
             <th>Status</th>
             <th>Accept </th>
             <th>Reject</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>

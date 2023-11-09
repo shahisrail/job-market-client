@@ -7,12 +7,12 @@ import { useState } from "react";
 
 const Jobdetails = () => {
   const { user } = useContext(AuthContext);
-const [userEmail, setUserEmail] = useState("");
-  
+  const [userEmail, setUserEmail] = useState("");
+
   const navigate = useNavigate();
   const load = useLoaderData();
   console.log(load);
-    const loginUSer = user?.email;
+  const loginUSer = user?.email;
   console.log(loginUSer);
   const {
     Email,
@@ -29,10 +29,9 @@ const [userEmail, setUserEmail] = useState("");
   useEffect(() => {
     setUserEmail(user?.email || "");
   }, [user?.email]);
-  
 
-  console.log(user);  
-console.log(isOwner);
+  console.log(user);
+  console.log(isOwner);
   const handelSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -74,7 +73,7 @@ console.log(isOwner);
         navigate("/mybids");
       });
   };
-   console.log(user?.Email);
+  console.log(user?.Email);
   return (
     <>
       <a className="block max-w-2xl mx-auto text-center p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
