@@ -38,7 +38,7 @@ const Request = () => {
             <th>Status</th>
             <th>Accept </th>
             <th>Reject</th>
-            <th></th>
+            <th>progress</th>
           </tr>
         </thead>
         <tbody>

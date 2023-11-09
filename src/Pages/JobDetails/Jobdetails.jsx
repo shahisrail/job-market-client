@@ -1,14 +1,19 @@
 /* eslint-disable no-unused-vars */
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import Swal from "sweetalert2";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/provider";
+import { useState } from "react";
 
 const Jobdetails = () => {
   const { user } = useContext(AuthContext);
+const [userEmail, setUserEmail] = useState("");
+  
   const navigate = useNavigate();
   const load = useLoaderData();
   console.log(load);
+    const loginUSer = user?.email;
+  console.log(loginUSer);
   const {
     Email,
     Jobtitle,
@@ -21,7 +26,13 @@ const Jobdetails = () => {
   } = load;
 
   const isOwner = user?.email === Email; // Check if the current user is the owner
+  useEffect(() => {
+    setUserEmail(user?.email || "");
+  }, [user?.email]);
+  
 
+  console.log(user);  
+console.log(isOwner);
   const handelSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -63,7 +74,7 @@ const Jobdetails = () => {
         navigate("/mybids");
       });
   };
-
+   console.log(user?.Email);
   return (
     <>
       <a className="block max-w-2xl mx-auto text-center p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
@@ -90,6 +101,7 @@ const Jobdetails = () => {
           <h2 className="text-3xl text-yellow-300 mt-[-50px] font-extrabold">
             Place your bid
           </h2>
+
           <form onSubmit={handelSubmit}>
             <div className="md:flex gap-4 mb-4">
               <div className="form-control w-full md:w-1/2 ">
@@ -131,12 +143,13 @@ const Jobdetails = () => {
                     type="email"
                     name="Email"
                     placeholder="Email"
-                    value={user?.email}
+                    defaultValue={userEmail}
                     readOnly
                     className="input input-bordered w-full"
                   />
                 </label>
               </div>
+
               <div className="form-control w-full md:w-1/2 ">
                 <label className="label">
                   <span className="label-text text-yellow-300">

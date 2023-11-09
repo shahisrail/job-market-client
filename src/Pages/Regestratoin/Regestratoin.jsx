@@ -7,7 +7,7 @@ import { AuthContext } from "../../AuthProvider/provider";
 import { Helmet } from "react-helmet";
 
 const Regestratoin = () => {
-  const { user, setUser, createuser, signinWithGoogle } =
+  const { user, setUser, createuser, signinWithGoogle, logout } =
     useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
@@ -37,14 +37,24 @@ const Regestratoin = () => {
     createuser(email, password)
       .then((result) => {
         updateProfile(result.user, { displayName: name, photoURL: photo }).then(
+        
           () => {
-            // regetare was successful
+             navigate("/login");
+            //    regetare was successful
+             logout().then((result) => {
+               console.log(result);
+               Swal.fire({
+                 icon: "success",
+                 text: "User created successfully",
+                 footer: "please login",
+               });
+             });
             Swal.fire({
               icon: "success",
               title: "wow great complete your regestratoin",
             });
             setUser({ ...user, displayName: name, photoURL: photo });
-            navigate(location?.state ? location.state : "/");
+            navigate(location?.state ? location.state : "/login");
           }
         );
       })
