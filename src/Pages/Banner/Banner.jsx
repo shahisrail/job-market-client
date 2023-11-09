@@ -118,7 +118,7 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://i.ibb.co/KX4Q1Jv/Blue-and-White-Modern-3-D-Digital-Marketing-Agency-Facebook-Ad.png"
+            src="https://i.ibb.co/6YxR7n7/Black-Yellow-and-White-Modern-Digital-Markerting-Agency-Outdoor-Banner-3.png"
             alt=""
           />
         </SwiperSlide>
