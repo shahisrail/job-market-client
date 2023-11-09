@@ -3,7 +3,12 @@ import React from "react";
 
 const Working = () => {
   return (
-    <div className="bg-[#FEF9F9]">
+    <div
+      data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="2000"
+      className="bg-[#FEF9F9]"
+    >
       <h2 className="text-center mt-10 text-2xl">Working Process</h2>
       <h2 className="text-center  text-5xl">How It Works</h2>
       <div
