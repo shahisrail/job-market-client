@@ -33,7 +33,12 @@ const JobCar = ({ cart }) => {
   };
 
   return (
-    <div className="relative flex flex-col mt-6 text-gray-700 bg-white shadow-md  rounded-xl bg-clip-border">
+    <div
+      data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="2000"
+      className="relative flex flex-col mt-6  text-gray-700 bg-slate-200 shadow-md  rounded-xl bg-clip-border"
+    >
       <div className="p-6">
         <h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
           Category: {Category}

@@ -6,8 +6,18 @@ const Working = () => {
     <div className="bg-[#FEF9F9]">
       <h2 className="text-center mt-10 text-2xl">Working Process</h2>
       <h2 className="text-center  text-5xl">How It Works</h2>
-      <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 mt-3 gap-5 p-5">
-        <div className=" bg-[#FFFFFF] rounded-lg">
+      <div
+        data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000"
+        className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 mt-3 gap-5 p-5"
+      >
+        <div
+          data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000"
+          className=" bg-[#FFFFFF] rounded-lg"
+        >
           <div className="flex justify-between p-5">
             <div className="flex justify-center items-center">
               <h2 className="flex justify-center items-center text-6xl text-[#4D98E2] font-bold">
@@ -29,7 +39,12 @@ const Working = () => {
             </p>
           </div>
         </div>
-        <div className="bg-opacity-50 bg-blur-md bg-[#FFFFFF] rounded-lg">
+        <div
+          data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000"
+          className="bg-opacity-50 bg-blur-md bg-[#FFFFFF] rounded-lg"
+        >
           <div className="flex justify-between p-5">
             <div className="flex justify-center items-center">
               <h2 className="flex justify-center items-center text-6xl text-[#BC84CA] font-bold">
@@ -52,7 +67,12 @@ const Working = () => {
           </div>
         </div>
 
-        <div className="bg-[#FFFFFF] rounded-lg ">
+        <div
+          data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000"
+          className="bg-[#FFFFFF] rounded-lg "
+        >
           <div className="flex justify-between p-5">
             <div className="flex justify-center items-center">
               <h2 className="flex justify-center items-center text-6xl text-[#6AD8B1] font-bold">
