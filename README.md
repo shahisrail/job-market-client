@@ -3,8 +3,11 @@
 
 ### Discuss how you managed the state in your assignment project,
 
+
 Start by creating a React application and set up routing using a library like
 react-router-dom and use mongoDB data vase and express cors node js.
+
+
 
 ## steap -1
 
@@ -41,7 +44,16 @@ react-router-dom and use mongoDB data vase and express cors node js.
 
 ### login regestratoin atunticatoin
 
+# System Technologies Used:
+## Frontend Technologies:
+### React: Leveraged for building the dynamic and responsive user interface.
+### JavaScript: Utilized for implementing interactive functionalities and logic.
+### Tailwind CSS: Employed for crafting the UI components and styling.
 
+## Backend Technologies:
+###  Node.js: Used as the runtime environment for executing JavaScript server-side.
+### Express.js: Framework employed for developing the backend server to handle requests and responses.
+### MongoDB: Chosen as the database system for efficient data management.
 
 # Running the Project Locally
 ##Frontend:
