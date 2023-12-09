@@ -43,23 +43,26 @@ react-router-dom and use mongoDB data vase and express cors node js.
 
 
 
-# How to clone and run my projects follow this steap 
-## steap-1
-### clone this repo and open your code editor 
-## steap-2
-### open terminal and install node_modules commend  ( npm i)
-## steap-3 
-### set your firebase authonticatoin variable key 
-## steap-4 
-### open terminal and run this command (npm run dev) open loaclhoast
-### clone this server side repo and open your code editor 
-## steap-6
-### install node_modules commend  ( npm i)
-## steap-7
-### set your mongoDB uri (`mongodb+srv://${Your user name}:${Your pass}@cluster0.bkdyuro.mongodb.net/?retryWrites=true&w=majority) and your database name (Your user name ) and password  (Your pass)
-## steap-8
-### Run your terminal this comand (nodemon index.js)
+# Running the Project Locally
+##Frontend:
 
+## steap-1
+### Clone this repository and open your code editor.
+## steap-2
+### Install required dependencies by running npm i in the terminal
+## steap-3 
+### Set your Firebase authentication variables. 
+## steap-4 
+###Run the project using npm run dev and open the localhost.
+## Backend 
+## steap-5
+### Clone the server-side repository and open your code editor.
+## steap-6
+### Install necessary dependencies with npm i.
+## steap-7
+### Set your MongoDB URI, database name, username, and password in index.js.
+## steap-8
+###Run the server using nodemon index.js in the terminal.
 
 ## website link : https://majestic-duckanoo-d34de8.netlify.app/
 ## This server side code link: https://github.com/shahisrail/job-market-server
