@@ -8,8 +8,7 @@ react-router-dom and use mongoDB data vase and express cors node js.
 
 ## steap -1
 
-###You've created a home page with a navigation bar and Three tab  for
-different category. The footer contains and how it is work sectoin our Service 
+### You've created a home page with a navigation bar and Three tab  for different category. The footer contains and how it is work sectoin our Service 
 
 ## steap - 2
 
@@ -31,15 +30,36 @@ different category. The footer contains and how it is work sectoin our Service
 
 ### post user post any user bid show a request  Bid request 
 
-## steap - 7
+## steap-7
+### My bids route user show only his bid request and show his all bidst status 
 
+## steap - 8
 ### this byer when akcept update  status and update user state and when reject update reject
 
 
-## steap-7
+## steap-9
 
 ### login regestratoin atunticatoin
 
 
 
-## website link : https://assaignment-11-63ae5.web.app/
+# How to clone and run my projects follow this steap 
+## steap-1
+### clone this repo and open your code editor 
+## steap-2
+### open terminal and install node_modules commend  ( npm i)
+## steap-3 
+### set your firebase authonticatoin variable key 
+## steap-4 
+### open terminal and run this command (npm run dev) open loaclhoast
+### clone this server side repo and open your code editor 
+## steap-6
+### install node_modules commend  ( npm i)
+## steap-7
+### set your mongoDB uri (`mongodb+srv://${Your user name}:${Your pass}@cluster0.bkdyuro.mongodb.net/?retryWrites=true&w=majority) and your database name (Your user name ) and password  (Your pass)
+## steap-8
+### Run your terminal this comand (nodemon index.js)
+
+
+## website link : https://majestic-duckanoo-d34de8.netlify.app/
+## This server side code link: https://github.com/shahisrail/job-market-server
