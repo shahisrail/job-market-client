@@ -56,7 +56,7 @@ react-router-dom and use mongoDB data vase and express cors node js.
 ### MongoDB: Chosen as the database system for efficient data management.
 
 # Running the Project Locally
-##Frontend:
+## Frontend:
 
 ## steap-1
 ### Clone this repository and open your code editor.
@@ -74,7 +74,7 @@ react-router-dom and use mongoDB data vase and express cors node js.
 ## steap-7
 ### Set your MongoDB URI, database name, username, and password in index.js.
 ## steap-8
-###Run the server using nodemon index.js in the terminal.
+### Run the server using nodemon index.js in the terminal.
 
 ## website link : https://majestic-duckanoo-d34de8.netlify.app/
 ## This server side code link: https://github.com/shahisrail/job-market-server
