@@ -59,6 +59,10 @@ const Nav = () => {
           <NavLink to="/BidRequest">Bid Requests</NavLink>
         </li>
       )}
+
+      <li>
+        <NavLink to="/contact">Contact</NavLink>
+      </li>
       <li>
         <NavLink to="/login">Login</NavLink>
       </li>

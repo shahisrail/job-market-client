@@ -25,7 +25,7 @@ const Mybids = () => {
   }, [status, user]);
 
   if (bids.length === 0) {
-    return <div>Loading...</div>;
+    return <div>No data added</div>;
   }
 
   return (
