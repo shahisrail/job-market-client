@@ -1,29 +1,34 @@
 /* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
 import axios from "axios";
-import React from "react";
+import React, { useState } from "react";
 
 const RequestData = ({ data }) => {
-  const { Deadline, Email, Price, Jobtitle, _id, status } = data;
+  const { Deadline, Email, Price, Jobtitle, _id } = data;
+
+  // Local state to manage status
+  const [status, setStatus] = useState(data.status);
 
   const handelAkcept = (id) => {
-    const status = { status: "progress" };
+    const updatedStatus = { status: "progress" };
     axios
-      .patch(
-        `https://assaignment-11-server-nu.vercel.app/BidRequest/${id}`,
-        status
-      )
-      .then((response) => console.log(response))
+      .patch(`http://localhost:5000/BidRequest/${id}`, updatedStatus)
+      .then((response) => {
+        // Update status locally upon successful response
+        setStatus("progress");
+        console.log(response);
+      })
       .catch((error) => console.log(error));
   };
+
   const handelReject = (id) => {
-    const status = { status: "rejected" };
+    const updatedStatus = { status: "rejected" };
     axios
-      .patch(
-        `https://assaignment-11-server-nu.vercel.app/BidRequest/${id}`,
-        status
-      )
-      .then((response) => console.log(response))
+      .patch(`http://localhost:5000/BidRequest/${id}`, updatedStatus)
+      .then((response) => {
+        // Update status locally upon successful response
+        setStatus("rejected");
+        console.log(response);
+      })
       .catch((error) => console.log(error));
   };
 
@@ -41,10 +46,9 @@ const RequestData = ({ data }) => {
       <td>{Deadline}</td>
       <td>{Price}</td>
       <td>{status}</td>
-
       <td>
         <button className="btn" onClick={() => handelAkcept(_id)}>
-          akcept
+          Accept
         </button>
       </td>
       <td>

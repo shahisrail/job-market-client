@@ -10,10 +10,10 @@ const Mybids = () => {
   const { user } = useContext(AuthContext);
 
   console.log(status);
-
+  console.log(user.email);
   useEffect(() => {
-    const apiUrl = `https://assaignment-11-server-nu.vercel.app/mybids?Email=${user?.email}`;
-
+    const apiUrl = `http://localhost:5000/mybids?Email=${user?.email}`;
+    console.log(apiUrl);
     // Add sorting parameters based on the selected "status" value
     const sortedUrl =
       status === "asc" ? `${apiUrl}&sortField=status&sortOrder=asc` : apiUrl;
@@ -23,7 +23,7 @@ const Mybids = () => {
       .then((data) => setBids(data))
       .catch((error) => console.error("Error fetching data:", error));
   }, [status, user]);
-
+  console.log(setStatus);
   if (bids.length === 0) {
     return <div>No data added</div>;
   }

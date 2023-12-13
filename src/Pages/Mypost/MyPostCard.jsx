@@ -28,7 +28,7 @@ const MyPostCard = ({ cart, setData, cartdata }) => {
     }).then((result) => {
       if (result.isConfirmed) {
         // Swal.fire("Deleted!", "Your file has been deleted.", "success");
-        fetch(`https://assaignment-11-server-nu.vercel.app/cart/${_id}`, {
+        fetch(`http://localhost:5000/cart/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

@@ -22,7 +22,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("https://assaignment-11-server-nu.vercel.app/cart"),
+        loader: () => fetch("http://localhost:5000/cart"),
       },
       {
         path: "/Addjob",
@@ -60,18 +60,14 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(
-            `https://assaignment-11-server-nu.vercel.app/cart/${params.id}`
-          ),
+          fetch(`http://localhost:5000/cart/${params.id}`),
       },
 
       {
         path: "/update/:id",
         element: <Updated></Updated>,
         loader: ({ params }) =>
-          fetch(
-            `https://assaignment-11-server-nu.vercel.app/cart/${params.id}`
-          ),
+          fetch(`http://localhost:5000/cart/${params.id}`),
       },
       {
         path: "/mybids",

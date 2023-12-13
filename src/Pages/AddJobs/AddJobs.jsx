@@ -32,7 +32,7 @@ const AddJobs = () => {
       availavelvid: true,
     };
     console.log(cart);
-    fetch(`https://assaignment-11-server-nu.vercel.app/cart`, {
+    fetch(`http://localhost:5000/cart`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

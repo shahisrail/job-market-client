@@ -51,7 +51,7 @@ const Jobdetails = () => {
       availavelvid: true,
     };
     console.log(cart);
-    fetch("https://assaignment-11-server-nu.vercel.app/mybids", {
+    fetch("http://localhost:5000/mybids", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

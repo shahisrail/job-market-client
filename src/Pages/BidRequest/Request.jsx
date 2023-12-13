@@ -7,17 +7,17 @@ import { Helmet } from "react-helmet";
 const Request = () => {
   const [request, setRequest] = useState([]);
   const { user } = useContext(AuthContext);
-  const url = `https://assaignment-11-server-nu.vercel.app/BidRequest?Byeremail=${user?.email}`;
+  const url = `http://localhost:5000/BidRequest?Byeremail=${user?.email}`;
 
   console.log(url);
-  console.log(request);
+  console.log(setRequest);
 
   useEffect(() => {
     fetch(url, { credentials: "include" })
       .then((res) => res.json())
       .then((data) => setRequest(data))
       .catch((error) => console.error("Error fetching data:", error));
-  }, []);
+  }, [url]);
 
   if (request.length === 0) {
     return <div>Loading...</div>;
