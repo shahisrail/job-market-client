@@ -22,7 +22,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("http://localhost:5000/cart"),
+        loader: () => fetch("https://job-market-server.vercel.app/cart"),
       },
       {
         path: "/Addjob",
@@ -60,14 +60,14 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/cart/${params.id}`),
+          fetch(`https://job-market-server.vercel.app/cart/${params.id}`),
       },
 
       {
         path: "/update/:id",
         element: <Updated></Updated>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/cart/${params.id}`),
+          fetch(`https://job-market-server.vercel.app/cart/${params.id}`),
       },
       {
         path: "/mybids",

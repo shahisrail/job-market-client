@@ -41,7 +41,7 @@ const Updated = () => {
       availavelvid: true,
     };
     console.log(updatejob);
-    fetch(`http://localhost:5000/cart/${_id}`, {
+    fetch(`https://job-market-server.vercel.app/cart/${_id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

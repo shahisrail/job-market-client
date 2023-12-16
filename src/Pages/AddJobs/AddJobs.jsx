@@ -32,7 +32,7 @@ const AddJobs = () => {
       availavelvid: true,
     };
     console.log(cart);
-    fetch(`http://localhost:5000/cart`, {
+    fetch(`https://job-market-server.vercel.app/cart`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -11,7 +11,7 @@ const RequestData = ({ data }) => {
   const handelAkcept = (id) => {
     const updatedStatus = { status: "progress" };
     axios
-      .patch(`http://localhost:5000/BidRequest/${id}`, updatedStatus)
+      .patch(`https://job-market-server.vercel.app/BidRequest/${id}`, updatedStatus)
       .then((response) => {
         // Update status locally upon successful response
         setStatus("progress");
@@ -23,7 +23,7 @@ const RequestData = ({ data }) => {
   const handelReject = (id) => {
     const updatedStatus = { status: "rejected" };
     axios
-      .patch(`http://localhost:5000/BidRequest/${id}`, updatedStatus)
+      .patch(`https://job-market-server.vercel.app/BidRequest/${id}`, updatedStatus)
       .then((response) => {
         // Update status locally upon successful response
         setStatus("rejected");

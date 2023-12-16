@@ -9,7 +9,7 @@ const MybidsData = ({ data }) => {
   const handleComplete = (id) => {
     const newStatus = { status: "complete" };
     axios
-      .patch(`http://localhost:5000/mybids/${id}`, newStatus)
+      .patch(`https://job-market-server.vercel.app/mybids/${id}`, newStatus)
       .then((response) => console.log(response))
       .catch((error) => console.log(error));
   };

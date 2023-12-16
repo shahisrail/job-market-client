@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet";
 const Request = () => {
   const [request, setRequest] = useState([]);
   const { user } = useContext(AuthContext);
-  const url = `http://localhost:5000/BidRequest?Byeremail=${user?.email}`;
+  const url = `https://job-market-server.vercel.app/BidRequest?Byeremail=${user?.email}`;
 
   console.log(url);
   console.log(setRequest);
